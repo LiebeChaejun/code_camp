@@ -1,0 +1,60 @@
+.screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 제목 */
+h1 {
+  color: #0068ff;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+/* form 레이아웃 */
+form {
+  width: 470px;
+  height: 818px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* input 레이아웃 */
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.input label {
+  color: #797979;
+  font-size: 16px;
+}
+
+.input input {
+  border: 0px;
+  border-bottom: 1px solid #797979;
+}
+
+form button {
+  width: 470px;
+  height: 75px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #aacdff;
+
+  color: #0068ff;
+  font-size: 18px;
+}

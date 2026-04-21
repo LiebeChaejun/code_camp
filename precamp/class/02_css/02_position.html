@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      .parent {
+        width: 100px;
+        height: 100px;
+      }
+      .parent-box1 {
+        border: 1px solid lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .parent-box2 {
+        border: 1px solid lightcoral;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- flex란 여러 태그를 하나로 묶어서 정렬하는 것 -->
+    <div class="parent parent-box1">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+    </div>
+    <div class="parent parent-box2">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+    </div>
+  </body>
+</html>
