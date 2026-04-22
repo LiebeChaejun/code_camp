@@ -1,0 +1,105 @@
+.signupForm {
+  width: 540px;
+  height: 960px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aacdff;
+  border-radius: 20px;
+  padding: 60px 78px;
+}
+
+h1 {
+  color: #0068ff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+
+.input_profile {
+  width: full;
+  height: 60px;
+  font-size: 16px;
+  border-radius: 7px;
+  border: 1px solid #d2d2d2;
+}
+
+.phone_number {
+  display: flex;
+  gap: 14px;
+  width: full;
+}
+
+.phone_number input {
+  width: 151px;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid #d2d2d2;
+}
+
+.auth_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth_box {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+}
+
+.auth_box p {
+  color: #0068ff;
+}
+
+.auth_box button {
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+.auth_box button.auth_number {
+  color: #0068ff;
+  background-color: #fff;
+  border: 1px solid #d2d2d2;
+}
+
+.auth_box button.auth_timer {
+  color: #fff;
+  background-color: #0068ff;
+  border: 1px solid #0068ff;
+}
+
+form select {
+  width: full;
+  height: 60px;
+  font-size: 16px;
+  color: #797979;
+  background-color: #fff;
+  border: 1px solid #d2d2d2;
+  border-radius: 7px;
+}
+
+.form_gender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.submit_button {
+  width: full;
+  height: 75px;
+  font-size: 18px;
+  color: #0068ff;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #0068ff;
+}

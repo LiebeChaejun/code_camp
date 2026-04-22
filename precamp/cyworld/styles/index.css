@@ -71,9 +71,11 @@
 }
 
 .left__body__profile {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .profile__box {
@@ -82,27 +84,50 @@
   gap: 1px;
 }
 
-.profile {
+.profile_detail {
   display: flex;
   gap: 3px;
 }
 
-.profile p {
+.profile_detail p {
   color: #999999;
   font-size: 9px;
 }
 
 .left__body__footer {
+  width: 100%;
 }
 
-.wrapper_feel {
+.wrapper__feel {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.feel_title {
+  color: gray;
+  font-size: 11px;
+  margin-bottom: 5px;
 }
 
 /* 오른쪽 레이아웃 */
 .wrapper__right {
   width: 524px;
   height: 472px;
-  background-color: violet;
+}
+
+.wrapper__right__header {
+  width: 510px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.wrapper__right__body {
+  width: 510px;
+  height: 445px;
+  border: 1px solid gray;
+  border-radius: 14px;
+  background-color: white;
 }
