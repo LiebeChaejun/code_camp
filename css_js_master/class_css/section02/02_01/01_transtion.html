@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition 실습</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: lightblue;
+        /* white-space: pre; */
+
+        transition: width 0.5s, height 0.5s, background-color 1s;
+      }
+
+      .box:hover {
+        width: 400px;
+        height: 400px;
+        background-color: lightcoral;
+        filter: blur(5px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>안녕하세요 저는 주희입니다.</p>
+      <p>나이는 12살이고,</p>
+      <p>다람쥐초등학교에 다닙니다.</p>
+    </div>
+  </body>
+</html>
