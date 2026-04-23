@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Sizing</title>
+    <style>
+      * {
+        /* CSS 리셋 */
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 300px;
+        height: 300px;
+      }
+
+      /* 패딩 연습 */
+      .padding_box {
+        background-color: lightblue;
+        padding-top: 30px;
+        padding-left: 20px;
+        /* 이렇게 태그에 하나 하나 직접 입력도 가능함 */
+        box-sizing: border-box;
+
+        border: 10px solid blue;
+      }
+
+      /* 마진 연습 */
+      .margin_box {
+        background-color: lightcoral;
+      }
+
+      .margin_box input {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box padding_box">
+      <input type="text" />
+    </div>
+    <div class="box margin_box">
+      <input type="text" />
+    </div>
+  </body>
+</html>

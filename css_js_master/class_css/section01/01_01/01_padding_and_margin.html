@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>패딩과 마진 실습</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+      }
+
+      /* 패딩 연습 */
+      .padding_box {
+        background-color: lightblue;
+        padding-top: 30px;
+        padding-left: 20px;
+        /* box-sizing: border-box; */
+      }
+
+      /* 마진 연습 */
+      .margin_box {
+        background-color: lightcoral;
+      }
+
+      .margin_box input {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box padding_box">
+      <input type="text" />
+    </div>
+    <div class="box margin_box">
+      <input type="text" />
+    </div>
+  </body>
+</html>
