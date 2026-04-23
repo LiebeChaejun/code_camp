@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform 실습</title>
+    <style>
+      .transform_box {
+        width: 500px;
+        height: 500px;
+        background-color: lightseagreen;
+      }
+
+      .btn1 {
+        transform: skewX(300deg);
+      }
+
+      .btn2 {
+        transform: rotateX(180deg);
+      }
+
+      .btn3 {
+        transform: rotateY(180deg);
+      }
+
+      .btn4 {
+        transform: rotateZ(180deg);
+      }
+
+      .btn5 {
+        transform: scaleX(1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transform_box">
+      <button class="btn btn1">비틀기</button>
+      <button class="btn btn2">뒤집기X</button>
+      <button class="btn btn3">뒤집기Y</button>
+      <button class="btn btn4">뒤집기Z</button>
+      <button class="btn btn5">확대하기</button>
+    </div>
+  </body>
+</html>

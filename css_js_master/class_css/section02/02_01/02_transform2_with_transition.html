@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition 과 transform 함께 실습</title>
+    <style>
+      .paper {
+        width: 100px;
+        height: 150px;
+        background-color: green;
+
+        transition: transform 1s, background-color 1s;
+      }
+
+      .paper:hover {
+        transform: rotateY(180deg);
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="paper"></div>
+  </body>
+</html>
