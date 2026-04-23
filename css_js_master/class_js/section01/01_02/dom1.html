@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호이스팅과 TDZ</title>
+    <style>
+      .fruits {
+        width: 300px;
+        height: 300px;
+        background-color: lightblue;
+      }
+
+      .profile {
+        width: 300px;
+        height: 300px;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fruits">
+      <div id="fruit">apple</div>
+      <button onclick="findingFavoriteFruit()">과일 찾기</button>
+    </div>
+    <div class="profile">
+      <input id="name" type="text" />
+      <button onclick="registerProfile()">register profile</button>
+      <p>오늘의 인삿말: <div id="sayHello"></div></p>
+    </div>
+    <script src="./01_dom1.js"></script>
+  </body>
+</html>
