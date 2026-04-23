@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로컬스토리지와 세션스토리지 실습</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 200px;
+      }
+
+      .box1 {
+        background-color: lightblue;
+      }
+
+      .box2 {
+        background-color: lightcoral;
+      }
+
+      .box3 {
+        background-color: lightgoldenrodyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">
+      <h1>변수에 저장하기</h1>
+      <p>사과개수: <span id="basket"></span></p>
+
+      <button onclick="pushApple()">사과 담기</button>
+      <button onclick="popApple()">사과 꺼내기</button>
+    </div>
+
+    <div class="box box2">
+      <h1>세션스토리지에 저장하기</h1>
+      <p>사과개수: <span id="session_basket"></span></p>
+
+      <button onclick="session_pushApple()">사과 담기</button>
+      <button onclick="session_popApple()">사과 꺼내기</button>
+    </div>
+
+    <div class="box box3">
+      <h1>로컬스토리지에 저장하기</h1>
+      <p>사과개수: <span id="local_basket"></span></p>
+
+      <button onclick="local_pushApple()">사과 담기</button>
+      <button onclick="local_popApple()">사과 꺼내기</button>
+    </div>
+
+    <script src="./01_localStoage_sessionStorage.js"></script>
+  </body>
+</html>
