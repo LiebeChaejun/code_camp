@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox 세로정렬 실습</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+      }
+
+      .parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background-color: lightblue;
+        /* 부모 div에 height를 주어야 한다. */
+        /* height: 500px; */
+        /* height: 90%; %란 부모를 기준으로 몇 %인지를 측정하는 상대값이다. 부모가 없으면 높이 없음. */
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">메뉴</div>
+      <div class="child">알림</div>
+    </div>
+  </body>
+</html>

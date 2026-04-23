@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox_wrap 실습</title>
+    <style>
+      .box {
+        display: flex;
+        width: 500px;
+        height: 500px;
+        gap: 10px;
+      }
+
+      .unwrap {
+        background-color: lightblue;
+      }
+
+      .child {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid red;
+      }
+
+      .wrap {
+        background-color: lightcoral;
+
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box unwrap">
+      <div class="child child_unwrap"></div>
+      <div class="child child_unwrap"></div>
+      <div class="child child_unwrap"></div>
+      <div class="child child_unwrap"></div>
+      <div class="child child_unwrap"></div>
+      <div class="child child_unwrap"></div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="box wrap">
+      <div class="child child_wrap"></div>
+      <div class="child child_wrap"></div>
+      <div class="child child_wrap"></div>
+      <div class="child child_wrap"></div>
+      <div class="child child_wrap"></div>
+      <div class="child child_wrap"></div>
+    </div>
+  </body>
+</html>
