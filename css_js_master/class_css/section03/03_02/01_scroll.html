@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Y 실습</title>
+    <style>
+      .parent {
+        width: 200px;
+        height: 300px;
+        border: 1px solid black;
+        background-color: lightcyan;
+
+        /* 넘치는 영역 scroll 처리 */
+        overflow-y: scroll;
+        /* 넘치는 영역 안보이기 */
+        /* overflow-y: hidden; */
+      }
+
+      .child {
+        width: 150px;
+        height: 180px;
+        background-color: lightcoral;
+        margin: 10px;
+      }
+
+      .parentX {
+        display: flex;
+
+        width: 200px;
+        height: 300px;
+        border: 1px solid black;
+        background-color: lightgoldenrodyellow;
+
+        overflow-x: scroll;
+      }
+
+      .childX {
+        /* 나는 찌그러지지 않을거야 */
+        /* cf) flex-wrap */
+        flex-shrink: 0;
+
+        width: 150px;
+        height: 180px;
+        background-color: lightgreen;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>scollY</h2>
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+    <h2>scollX</h2>
+    <div class="parentX">
+      <div class="childX"></div>
+      <div class="childX"></div>
+      <div class="childX"></div>
+      <div class="childX"></div>
+      <div class="childX"></div>
+      <div class="childX"></div>
+    </div>
+  </body>
+</html>
