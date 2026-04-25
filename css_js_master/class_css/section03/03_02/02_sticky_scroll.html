@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll sticky 실습</title>
+    <style>
+      .parent {
+        width: 200px;
+        height: 300px;
+        border: 1px solid black;
+        background-color: lightcyan;
+
+        /* 넘치는 영역 scroll 처리 */
+        overflow-y: scroll;
+        /* 넘치는 영역 안보이기 */
+        /* overflow-y: hidden; */
+      }
+
+      .title {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background-color: lightpink;
+
+        line-height: 50px;
+        text-align: center;
+      }
+
+      .child {
+        width: 150px;
+        height: 180px;
+        background-color: lightcoral;
+        margin: 10px;
+      }
+    </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="title">민지의 다이어리</div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+</div>
+</body>
+</html>
