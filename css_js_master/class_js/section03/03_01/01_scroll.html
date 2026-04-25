@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스크롤 조작 실습</title>
+    <style>
+      .imageBox {
+        width: 1000px;
+        height: 500px;
+
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>scroll 조작 실습</h1>
+    <h2>window 스크롤 실습</h2>
+    <div>
+      <img src="./practice-img.jpeg" alt="practice 이미지" width="1000px" />
+    </div>
+    <button onclick="scrollWindow1()">윈도우 스크롤 조작하기1</button>
+    <button onclick="scrollWindow2()">윈도우 스크롤 조작하기2</button>
+    <button onclick="scrollWindow3()">윈도우 스크롤 조작하기3</button>
+
+    <h2>element 스크롤 실습</h2>
+    <div id="box" class="imageBox">
+      <img src="./practice-img.jpeg" alt="" width="1000px" />
+    </div>
+    <button onclick="scrollTag1()">태그 스크롤 조작하기1</button>
+    <button onclick="scrollTag2()">태그 스크롤 조작하기2</button>
+    <button onclick="scrollTag3()">태그 스크롤 조작하기3</button>
+
+    <script src="./01_scroll1_window.js"></script>
+    <script src="./01_scroll2_element.js"></script>
+  </body>
+</html>
