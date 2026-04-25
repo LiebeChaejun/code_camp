@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문으로 태그 만들기 실습</title>
+    <style>
+      #append1 {
+        width: 500px;
+        height: 300px;
+        background-color: lightblue;
+      }
+
+      #append2 {
+        width: 500px;
+        height: 300px;
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 태그 1개 추가 -->
+    <div id="append1"></div>
+    <button onclick="makeTag()">h1 태그 1개 만들기</button>
+    <!-- 태그 3개 반복문으로 추가 -->
+    <div id="append2"></div>
+    <button onclick="makeTags()">h1 태그 3개 만들기</button>
+
+    <script src="./03_tags.js"></script>
+  </body>
+</html>
