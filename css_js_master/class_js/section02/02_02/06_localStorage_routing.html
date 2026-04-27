@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06_localStorage 라우팅 페이지</title>
+  </head>
+  <body>
+    <h1>친구 소개 페이지 입니다.</h1>
+    <p id="intro"></p>
+    <script>
+      const queryString = location.search;
+
+      const friendsNumber = new URLSearchParams(queryString);
+      const number = friendsNumber.get("number");
+
+      const friendsList = JSON.parse(localStorage.getItem("friends-list"));
+
+      alert(
+        `${number}번째 친구, ${friendsList[number]}의 페이지에 오신 것을 환영합니다.`
+      );
+
+      const renderIntro = () => {
+        const introMessage = document.getElementById("intro");
+
+        introMessage.innerText = `${number}번쨰 친구, ${friendsList[number]}의 페이지 입니다.`;
+      };
+
+      renderIntro();
+    </script>
+  </body>
+</html>
