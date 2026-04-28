@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rem 실습</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .box {
+        width: 10rem;
+        height: 10rem;
+        margin: 20px;
+
+        background-color: lightblue;
+      }
+
+      @media (max-width: 500px) {
+        html {
+          font-size: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </body>
+</html>
