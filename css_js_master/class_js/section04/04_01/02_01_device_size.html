@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디바이스 사이즈 측정</title>
+    <style>
+      .window_size {
+        width: 100vw;
+        height: 1000px;
+
+        background-color: lightblue;
+      }
+
+      footer {
+        width: 100vw;
+        height: 50px;
+
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window_size"></div>
+    <footer class="footer">This is Footer Area</footer>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const element = document.querySelector(".footer");
+
+        const rect = element.getBoundingClientRect();
+
+        console.log(`Element Width : ${rect.width}`);
+
+        console.log(`Element Position: (${rect.top}, ${rect.left})`);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getBoundingClientRect 실습</title>
+    <style>
+      .container {
+        padding: 20px;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        border: 1px solid black;
+        margin: 20px 0;
+      }
+
+      .result {
+        background-color: lightgoldenrodyellow;
+        border: 1px solid gray;
+        padding: 10px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>getBoundingClientRect 실습</h1>
+
+      <div class="box" id="box">측정할 박스</div>
+
+      <button onclick="measureBox()">위치 측정하기</button>
+
+      <div class="result" id="result">
+        <p>버튼을 클릭하면 결과가 여기에 표시됩니다.</p>
+      </div>
+    </div>
+
+    <script>
+      const measureBox = () => {
+        const box = document.getElementById("box");
+        const rect = box.getBoundingClientRect();
+
+        const result = document.getElementById("result");
+
+        result.innerHTML = `
+          <p>top: ${Math.round(rect.top)}px</p>
+    <p>left: ${Math.round(rect.left)}px</p>
+    <p>bottom: ${Math.round(rect.bottom)}px</p>
+    <p>right: ${Math.round(rect.right)}px</p>
+    <p>width: ${Math.round(rect.width)}px</p>
+    <p>height: ${Math.round(rect.height)}px</p>
+        `;
+      };
+    </script>
+  </body>
+</html>
