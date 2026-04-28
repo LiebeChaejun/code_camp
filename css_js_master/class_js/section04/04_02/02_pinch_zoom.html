@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>모바일 핀치 줌 실습</title>
+    <style></style>
+  </head>
+  <body>
+    <img
+      id="img"
+      src="../04_01/img/puppy.jpeg"
+      alt=""
+      width="200px"
+      onclick="zoomInAndOut()"
+    />
+    <script>
+      const zoomInAndOut = () => {
+        document.body.style = "background-color: black;";
+        document.getElementById("img").style = "width: 100%;";
+
+        document.getElementsByName("viewport")[0].content = `
+          width=device-width,
+          initial-scale=1.0,
+          minimum-scale=1.0,
+          maximum-scale=3.0,
+          user-scalable=yes
+        `;
+      };
+    </script>
+  </body>
+</html>
