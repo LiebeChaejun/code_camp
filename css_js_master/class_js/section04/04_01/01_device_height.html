@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>높이 감지 실습</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .footer {
+        height: 100px;
+        background-color: lightgray;
+      }
+
+      .floating_button {
+        position: fixed;
+        bottom: 10px;
+        left: 90%;
+
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./img/puppy.jpeg" alt="" />
+    <button class="floating_button">플로팅 버튼</button>
+    <div class="footer">푸터</div>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        // const curScrollHeight = window.scrollY; //기본 스크롤 높이
+        const curScrollHeight = document.documentElement.scrollTop; // HTML 스크롤 높이
+
+        console.log(curScrollHeight);
+
+        if (curScrollHeight > 2401) {
+          document.querySelector(".floating_button").style = `
+          position: relative;
+          bottom: 40px;
+          left: 90%;
+
+          border-radius: 100%;
+          `;
+        } else {
+          document.querySelector(".floating_button").style = `
+          position: fixed;
+          bottom: 10px;
+          left: 90%;
+
+          border-radius: 100%;
+          `;
+        }
+      });
+    </script>
+  </body>
+</html>
