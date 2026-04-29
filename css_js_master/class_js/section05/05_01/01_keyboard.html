@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강아지 움직이기 실습</title>
+    <style>
+      .parrots {
+        position: absolute;
+        top: 300px;
+        left: 400px;
+      }
+    </style>
+
+    <script>
+      window.addEventListener("keydown", (e) => {
+        const parrots = document.getElementById("parrots");
+        const parrotsStyle = getComputedStyle(parrots);
+        const parrotsY = Number(parrotsStyle.top.replace("px", ""));
+        const parrotsX = Number(parrotsStyle.left.replace("px", ""));
+
+        // e.key에 대한 코드 찾으려면? => mdn에서 keyboard event key values 카테고리 찾으면 된다.
+        switch (e.key) {
+          case "ArrowUp": {
+            console.log(e.key);
+            // 강아지 위로 -20 옮기기
+            document.getElementById("parrots").style = `top: ${
+              parrotsY - 20
+            }px; left: ${parrotsX}px;`;
+
+            break;
+          }
+          case "ArrowDown": {
+            console.log(e.key);
+
+            // 강아지 아래로 +20 옮기기
+            document.getElementById("parrots").style = `top: ${
+              parrotsY + 20
+            }px; left: ${parrotsX}px`;
+
+            break;
+          }
+          case "ArrowLeft": {
+            console.log(e.key);
+
+            // 강아지 왼쪽으로 -20 옮기기
+            document.getElementById(
+              "parrots"
+            ).style = `top: ${parrotsY}px; left: ${parrotsX - 20}px;`;
+
+            break;
+          }
+          case "ArrowRight": {
+            console.log(e.key);
+
+            // 강아지 오른쪽으로 +20 옮기기
+            document.getElementById(
+              "parrots"
+            ).style = `top: ${parrotsY}px; left: ${parrotsX + 20}px`;
+
+            break;
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <img
+      class="parrots"
+      id="parrots"
+      src="./img/parrots.jpeg"
+      alt=""
+      width="100px"
+    />
+  </body>
+</html>
