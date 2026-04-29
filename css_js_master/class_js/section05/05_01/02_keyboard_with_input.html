@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>키보드와 입력창 실습</title>
+    <script>
+      const registerContent = () => {
+        alert("게시글이 등록 되었습니다.");
+      };
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          if (
+            document.activeElement.id === "title" ||
+            document.activeElement.id === "content"
+          ) {
+            registerContent();
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1>키보드와 입력창 실습</h1>
+    <form action="">
+      제목: <input id="title" type="text" /> 내용:
+      <input id="content" type="text" />
+      <button onclick="registerContent()">등록하기</button>
+    </form>
+  </body>
+</html>
