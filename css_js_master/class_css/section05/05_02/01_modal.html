@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모달 배경 실습</title>
+    <style>
+      .modal_background {
+        display: none;
+
+        position: absolute;
+        top: 30px;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+        background-color: lightgray;
+        opacity: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="openModal()">모달 열기</button>
+    <button onclick="closeModal()">모달 닫기</button>
+
+    <!-- 얘는 모달이에요 -->
+    <div id="modal_background" class="modal_background"></div>
+
+    <script>
+      const openModal = () => {
+        const open = (document.getElementById("modal_background").style =
+          "display: block;");
+      };
+
+      const closeModal = () => {
+        document.getElementById("modal_background").style = "display: none;";
+      };
+    </script>
+  </body>
+</html>
