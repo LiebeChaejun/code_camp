@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모달 아이템 만들기 실습</title>
+    <style>
+      .group {
+        display: none;
+
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      .background {
+        width: 100vw;
+        height: 100vh;
+
+        background-color: lightgray;
+        opacity: 90%;
+      }
+
+      .modal {
+        position: absolute;
+        top: calc(50% - 500px / 2);
+        left: calc(50% - 400px / 2);
+        width: 400px;
+        height: 500px;
+        background-color: lightblue;
+      }
+    </style>
+    <script>
+      const openModal = () => {
+        const group = (document.getElementById("group").style =
+          "display: block;");
+      };
+
+      const closeModal = () => {
+        const group = (document.getElementById("group").style =
+          "display: none;");
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="openModal()">모달 열기</button>
+
+    <!-- 모달 영역 -->
+    <div id="group" class="group">
+      <div onclick="closeModal()" class="background">
+        <div class="modal"></div>
+      </div>
+    </div>
+  </body>
+</html>
