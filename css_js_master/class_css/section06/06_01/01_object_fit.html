@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 맞춤 실습</title>
+    <style>
+      .parrot1 {
+        width: 300px;
+        height: 300px;
+
+        object-fit: cover;
+
+        background-color: black;
+      }
+
+      .parrot2 {
+        width: 300px;
+        height: 300px;
+
+        object-fit: contain;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>cover 방식</div>
+    <img class="parrot1" src="./img/parrot1.jpeg" alt="" />
+    <div>contain 방식</div>
+    <img class="parrot2" src="./img/parrot1.jpeg" alt="" />
+  </body>
+</html>
