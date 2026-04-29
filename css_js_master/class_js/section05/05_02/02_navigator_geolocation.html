@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 위치 실습</title>
+    <script>
+      const restaurant_list = [
+        { name: "철수네 삼겹살", lat: 37.112351, lng: 127.3819273 },
+        {
+          name: "영희네 초밥집",
+          lat: 37.2831927,
+          lng: 127.1162738,
+        },
+      ];
+
+      const searchRestaurant = () => {
+        navigator.geolocation.getCurrentPosition((curLocation) => {
+          const lat = curLocation.coords.latitude;
+          const lng = curLocation.coords.longitude;
+
+          alert(`당신의 위치는 ${lat}, ${lng} 입니다.`);
+
+          restaurant_list.forEach((restaurant) => {
+            const isNearLat = lat - restaurant.lat <= 0.5 ? true : false;
+            const isNearLng = lng - restaurant.lng < 0.5 ? true : false;
+
+            if (isNearLat === true && isNearLng === true) {
+              alert(`${restaurant.name}이 근처에 있어요.`);
+            }
+          });
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="searchRestaurant()">내 근처 맛집 보기</button>
+  </body>
+</html>
