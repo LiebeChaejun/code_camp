@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 실습</title>
+    <script>
+      const registerContent = () => {
+        alert("게시글 등록이 완료되었습니다.");
+      };
+
+      const like = () => {
+        alert("좋아요가 +1 올랐습니다.");
+      };
+    </script>
+  </head>
+  <body>
+    <h1>폼 태그 내장기능 실습</h1>
+    <form action="" onsubmit="registerContent()">
+      제목: <input type="text" />
+      <br />
+      내용: <input type="text" />
+      <br />
+      <button>등록하기</button>
+      <button type="reset">리셋하기</button>
+      <button type="button" onclick="like()">개인 기능</button>
+
+      <p>button의 기본값은 onsubmit</p>
+    </form>
+  </body>
+</html>
