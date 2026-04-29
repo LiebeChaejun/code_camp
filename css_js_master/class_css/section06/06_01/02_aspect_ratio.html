@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 비율 변경 실습</title>
+    <style>
+      .img1 {
+        width: 300px;
+
+        aspect-ratio: 3/1;
+
+        object-fit: cover;
+      }
+
+      .img2 {
+        height: 300px;
+        aspect-ratio: 3/1;
+
+        object-fit: cover;
+      }
+
+      .tag {
+        width: 100px;
+
+        aspect-ratio: 1/2;
+      }
+    </style>
+  </head>
+  <body>
+    <div>3:1 방식(가로사이즈를 알고 있을 때)</div>
+    <img class="img img1" src="./img/parrot2.jpeg" alt="" />
+
+    <div>3:1 방식(세로 사이즈를 알고 있을 때)</div>
+    <img class="img img2" src="./img/parrot2.jpeg" alt="" />
+
+    <div>1:2 방식(태그도 됨)</div>
+    <button class="tag">버튼</button>
+  </body>
+</html>
