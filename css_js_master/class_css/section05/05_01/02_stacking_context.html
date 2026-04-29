@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index 쌓임맥락 실습</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+      }
+
+      .yellow {
+        background-color: yellow;
+
+        /* 얘는 왜 z-index가 적용이 안될까? -> position이 있는 친구들끼리 쌓임맥락을 형성하기 때문! */
+        z-index: 5;
+
+        /* position을 주어쌓임 맥락을 형성하면 z-index가 적용됨 */
+        position: absolute;
+      }
+
+      .blue {
+        background-color: lightblue;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+
+        z-index: 1;
+      }
+
+      .green {
+        background-color: lightgreen;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box yellow"></div>
+    <div class="box blue"></div>
+    <div class="box green"></div>
+  </body>
+</html>
