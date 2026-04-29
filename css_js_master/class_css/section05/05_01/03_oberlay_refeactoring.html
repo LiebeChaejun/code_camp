@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>겹치기 리팩터링 실습</title>
+    <style>
+      .group {
+        position: relative;
+      }
+
+      .group img {
+        background-color: blue;
+        border: 3px solid black;
+      }
+
+      .delete {
+        background-color: pink;
+        position: absolute;
+        top: 0px;
+        left: 200px;
+      }
+
+      .description_box {
+        background-color: lightblue;
+      }
+
+      .description_box h3 {
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>쌓임맥락</h1>
+    <h2>쌓임맥락 적용</h2>
+    <div class="group">
+      <img src="./img/parrots.jpeg" alt="앵무새 이미지" width="200px" />
+      <button class="delete">X1</button>
+      <div class="description_box">
+        <h3>이미지 상세 설명</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          tenetur exercitationem possimus quos atque quo voluptates fugit et
+          corrupti mollitia aliquam deleniti iste velit quas, harum nostrum
+          alias totam maxime!
+        </p>
+      </div>
+    </div>
+
+    <h2>쌓임맥락 미적용</h2>
+    <div class="group2">
+      <img src="./img/parrots.jpeg" alt="앵무새 이미지" width="200px" />
+      <button class="delete">X2</button>
+      <div class="description_box">
+        <h3>이미지 상세 설명</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          tenetur exercitationem possimus quos atque quo voluptates fugit et
+          corrupti mollitia aliquam deleniti iste velit quas, harum nostrum
+          alias totam maxime!
+        </p>
+      </div>
+    </div>
+
+    <h3>정리</h3>
+    <p>쌓임맥락이 적용된 태그를 기준으로 position abosolute를 적용</p>
+    <p>
+      쌓임맥락이 형성되지 않은 태그는 부모의 최상위 태그를 기준으로 위치 조정
+    </p>
+  </body>
+</html>
