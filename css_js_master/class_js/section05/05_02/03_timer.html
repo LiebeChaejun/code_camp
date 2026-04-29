@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>타이머 실습</title>
+    <style>
+      html {
+        cursor: none;
+      }
+
+      .mouse {
+        position: absolute;
+        z-index: 999;
+
+        width: 30px;
+        height: 30px;
+      }
+
+      .mole_box {
+        width: 100vw;
+        height: 100vh;
+        background-color: lightblue;
+      }
+
+      .mole {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      .mole1 {
+        top: 100px;
+        left: 100px;
+      }
+
+      .mole2 {
+        top: 300px;
+        left: 300px;
+      }
+
+      .mole3 {
+        top: 100px;
+        left: 300px;
+      }
+
+      .mole4 {
+        top: 300px;
+        left: 100px;
+      }
+
+      .mole5 {
+        top: 500px;
+        left: 300px;
+      }
+
+      .mole6 {
+        top: 500px;
+        left: 100px;
+      }
+    </style>
+    <script>
+      // 1. 마우스 변경
+      // 2. 두더지 그림 위치 시키기
+      // 3. 마우스 클릭시 두더지 사라져야 해
+
+      window.addEventListener("mousemove", (event) => {
+        const mouse = document.getElementById("mouse");
+        mouse.style.top = `${event.clientY + 5}px`;
+        mouse.style.left = `${event.clientX + 5}px`;
+      });
+
+      const catchMole = (id) => {
+        const mole = document.getElementById(id);
+        mole.style = "display: none;";
+
+        setTimeout(() => {
+          mole.style = "display: block;";
+        }, 2000);
+      };
+    </script>
+  </head>
+  <body>
+    <img id="mouse" class="mouse" src="./img/hammer.jpeg" alt="" />
+    <div class="mole_box">
+      <img
+        id="mole1"
+        class="mole mole1"
+        src="./img/두더지.jpg"
+        alt=""
+        onclick="catchMole('mole1')"
+      />
+      <img
+        id="mole2"
+        class="mole mole2"
+        src="./img/두더지.jpg"
+        alt=""
+        onclick="catchMole('mole2')"
+      />
+      <img
+        id="mole3"
+        class="mole mole3"
+        src="./img/두더지.jpg"
+        alt=""
+        onclick="catchMole('mole3')"
+      />
+      <img
+        id="mole4"
+        class="mole mole4"
+        src="./img/두더지.jpg"
+        alt=""
+        onclick="catchMole('mole4')"
+      />
+      <img
+        id="mole5"
+        class="mole mole5"
+        src="./img/두더지.jpg"
+        alt=""
+        onclick="catchMole('mole5')"
+      />
+      <img
+        id="mole6"
+        class="mole mole6"
+        src="./img/두더지.jpg"
+        alt=""
+        onclick="catchMole('mole6')"
+      />
+    </div>
+  </body>
+</html>
