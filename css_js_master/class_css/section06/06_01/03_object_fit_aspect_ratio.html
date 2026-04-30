@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 맞춤 비율 실습</title>
+    <style>
+      .scroll {
+        height: 500px;
+        overflow: scroll;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .img {
+        width: 300px;
+
+        object-fit: cover;
+        aspect-ratio: 16/9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll">
+      <img src="./img/parrot1.jpeg" alt="" class="img" />
+      <img src="./img/parrot2.jpeg" alt="" class="img" />
+      <img src="./img/parrot3.jpeg" alt="" class="img" />
+      <img src="./img/parrot4.jpeg" alt="" class="img" />
+      <img src="./img/parrot5.jpeg" alt="" class="img" />
+      <img src="./img/parrot6.jpeg" alt="" class="img" />
+    </div>
+  </body>
+</html>
