@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이지 이동효과(뒤로가기) 실습</title>
+    <style>
+      .page {
+        animation-name: nextPageAnimation;
+        animation-duration: 0.4s;
+      }
+
+      .box {
+        background-color: lightgoldenrodyellow;
+        width: 1000px;
+        height: 200px;
+        margin: 10px;
+      }
+
+      @keyframes nextPageAnimation {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+
+      @keyframes backAnimation {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(100%);
+        }
+      }
+    </style>
+    <script>
+      const back = () => {
+        document.getElementById("page").style =
+          "animation-name: backAnimation;";
+
+        window.addEventListener("animationend", () => {
+          history.back();
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div id="page" class="page">
+      <button onclick="back()">나가기</button>
+      <div class="box"></div>
+      <p>안녕하세요, 저는 철수입니다. 이곳은 상세 페이지 입니다</p>
+      <p>안녕하세요, 저는 철수입니다. 이곳은 상세 페이지 입니다</p>
+      <p>안녕하세요, 저는 철수입니다. 이곳은 상세 페이지 입니다</p>
+      <p>안녕하세요, 저는 철수입니다. 이곳은 상세 페이지 입니다</p>
+
+      <div class="box"></div>
+      <p>안녕하세요, 저는 철수입니다. 이곳은 상세 페이지 입니다</p>
+      <p>안녕하세요, 저는 철수입니다. 이곳은 상세 페이지 입니다</p>
+      <p>안녕하세요, 저는 철수입니다. 이곳은 상세 페이지 입니다</p>
+      <p>안녕하세요, 저는 철수입니다. 이곳은 상세 페이지 입니다</p>
+    </div>
+  </body>
+</html>
