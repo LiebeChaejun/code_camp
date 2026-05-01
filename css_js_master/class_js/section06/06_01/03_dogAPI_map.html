@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>random dog image api 실습</title>
+    <style>
+      #frame {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .image {
+        width: 200px;
+        aspect-ratio: 3/1;
+        object-fit: cover;
+      }
+    </style>
+    <script>
+      const callDogPicture = () => {
+        fetch("https://dog.ceo/api/breeds/image/random/5")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+
+            const dogs = data.message
+              .map((dog) => `<img class="image" src='${dog}' />`)
+              .join("");
+
+            document.getElementById("frame").innerHTML = dogs;
+          });
+      };
+    </script>
+  </head>
+  <body>
+    <button onclick="callDogPicture()">사진 불러오기</button>
+    <div id="frame"></div>
+  </body>
+</html>
