@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다크 모드 실습2</title>
+    <style>
+      .dark_mode {
+        color: white;
+        background-color: black;
+      }
+
+      .dark_mode input {
+        background-color: lightgray;
+      }
+
+      .dark_mode input::placeholder {
+        color: orange;
+      }
+
+      .dark_mode button {
+        color: blue;
+        background-color: lightblue;
+      }
+
+      .form_box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    </style>
+    <script>
+      const darkMode = () => {
+        document.body.classList.toggle("dark_mode");
+      };
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" onclick="darkMode()" />다크모드
+
+    <br />
+    <br />
+
+    <div class="signupForm">
+      <form action="" class="form_box">
+        이메일:
+        <input type="text" placeholder="이메일을 입력하세요" /> 비밀번호:
+        <input type="password" placeholder="비밀번호를 입력하세요" />
+        <div class="gender">
+          <input type="radio" name="gender" />남자
+          <input type="radio" name="gender" />여자
+        </div>
+        <button>회원가입</button>
+      </form>
+    </div>
+  </body>
+</html>
