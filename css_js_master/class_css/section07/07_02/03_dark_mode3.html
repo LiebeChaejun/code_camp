@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다크 모드 실습3</title>
+    <style>
+      /* light-mode */
+      :root {
+        --basic-color: black;
+        --basic-bg: white;
+        --basic-check: red;
+        --basic-input-bg: white;
+        --basic-input-placeholder: gray;
+        --basic-btn-color: black;
+        --basic-btn-bg: lightgray;
+      }
+
+      /* dark-mode */
+      .dark_mode {
+        --basic-color: white;
+        --basic-bg: black;
+        --basic-check: orange;
+        --basic-input-bg: gray;
+        --basic-input-placeholder: orange;
+        --basic-btn-color: blue;
+        --basic-btn-bg: aqua;
+      }
+
+      body {
+        color: var(--basic-color);
+        accent-color: var(--basic-check);
+
+        transition: background-color 0.5s;
+      }
+
+      .input {
+        background-color: var(--basic-input-bg);
+      }
+
+      .input::placeholder {
+        color: var(--basic-input-placeholder);
+      }
+
+      .button {
+        color: var(--basic-btn-color);
+        background-color: var(--basic-btn-bg);
+      }
+
+      .form_box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    </style>
+    <script>
+      const darkMode = () => {
+        document.body.classList.toggle("dark_mode");
+      };
+    </script>
+  </head>
+  <body>
+    <input type="checkbox" onclick="darkMode()" />다크모드
+
+    <br />
+    <br />
+
+    <div class="signupForm">
+      <form action="" class="form_box">
+        이메일:
+        <input type="text" placeholder="이메일을 입력하세요" /> 비밀번호:
+        <input type="password" placeholder="비밀번호를 입력하세요" />
+        <div class="gender">
+          <input type="radio" name="gender" />남자
+          <input type="radio" name="gender" />여자
+        </div>
+        <button>회원가입</button>
+      </form>
+    </div>
+  </body>
+</html>
