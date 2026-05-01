@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>드롭다운 실습</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .title {
+        appearance: none;
+        width: 150px;
+        height: 40px;
+        border: 2px solid green;
+        border-radius: 10px;
+      }
+
+      .title::after {
+        content: "선택하세요.";
+      }
+
+      /* .menu {
+      } */
+    </style>
+  </head>
+  <body>
+    <input class="title" type="checkbox" />
+    <ul class="menu">
+      <li>
+        <input id="apple" type="radio" onclick="selectFruits()" />
+        <label for="apple">사과</label>
+      </li>
+      <li>
+        <input id="banana" type="radio" onclick="selectFruits()" />
+        <label for="banana">바나나</label>
+      </li>
+      <li>
+        <input id="strawberry" type="radio" onclick="selectFruits()" />
+        <label for="strawberry">딸기</label>
+      </li>
+    </ul>
+  </body>
+</html>
