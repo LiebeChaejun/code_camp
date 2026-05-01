@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 기능 디바운스 효과 적용</title>
+    <script>
+      // 친구목록
+      const list = ["짱구", "철수", "맹구", "훈이", "유리"];
+
+      let timer = "NonActivated";
+      // 검색 기능
+      const searchFriends = (event) => {
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+          const friend = event.target.value;
+          console.log("검색한 단어: ", friend);
+
+          const result = list.filter((el) => el.includes(friend));
+          console.log("검색결과: ", result);
+
+          document.getElementById("result").innerHTML = result;
+        }, 1000);
+      };
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="친구를 검색하세요."
+      oninput="searchFriends(event)"
+    />
+
+    <div id="result"></div>
+  </body>
+</html>
