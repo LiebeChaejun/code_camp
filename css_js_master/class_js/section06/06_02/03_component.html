@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이지 이동 컴포넌트 실습</title>
+    <style>
+      .banner {
+        height: 100px;
+        background-color: lightblue;
+      }
+
+      .navigation {
+        height: 50px;
+        background-color: lightcoral;
+      }
+    </style>
+    <script src="./03_component_diary.js"></script>
+    <script src="./03_component_puppy.js"></script>
+    <script>
+      const navigateMenu = (content) => {
+        switch (content) {
+          case "diary": {
+            document.getElementById("menu").innerHTML = diaryMenu;
+            break;
+          }
+          case "puppy": {
+            document.getElementById("menu").innerHTML = puppyMenu;
+            break;
+          }
+        }
+      };
+
+      window.onload = () => {
+        document.getElementById("menu").innerHTML = diaryMenu;
+      };
+    </script>
+  </head>
+  <body>
+    <div class="banner">배너 이미지 입니다.</div>
+    <div class="navigation">
+      <button onclick="navigateMenu('diary')">diary</button>
+      <button onclick="navigateMenu('puppy')">puppy</button>
+    </div>
+    <div id="menu"></div>
+  </body>
+</html>
