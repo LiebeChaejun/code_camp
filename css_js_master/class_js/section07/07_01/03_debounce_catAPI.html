@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>외부 API를 활용한 디바운스 기능</title>
+    <script>
+      let timer = "NonActivated";
+      // 검색 기능
+      const searchFriends = (event) => {
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+          const searchWord = event.target.value;
+          console.log("검색한 단어: ", searchWord);
+
+          document.getElementById("result").innerHTML = `
+            <img src="https://cataas.com/cat/${searchWord}/says/hello" width="300px" />
+          `;
+        }, 1000);
+      };
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="친구를 검색하세요."
+      oninput="searchFriends(event)"
+    />
+
+    <div id="result"></div>
+  </body>
+</html>
