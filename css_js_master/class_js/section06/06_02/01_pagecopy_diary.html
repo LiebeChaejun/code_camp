@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이지 복사 실습(diary)</title>
+    <style>
+      .banner {
+        height: 100px;
+        background-color: lightblue;
+      }
+
+      .navigation {
+        height: 50px;
+        background-color: lightcoral;
+      }
+    </style>
+    <script>
+      const navigateMenu = (content) => {
+        switch (content) {
+          case "diary": {
+            location.href = "./01_pagecopy_diary.html";
+            break;
+          }
+          case "puppy": {
+            location.href = "./01_pagecopy_puppy.html";
+            break;
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div class="banner">배너 이미지 입니다.</div>
+    <div class="navigation">
+      <button onclick="navigateMenu('diary')">diary</button>
+      <button onclick="navigateMenu('puppy')">puppy</button>
+    </div>
+    <div class="content">
+      <div>일기 목록 입니다.</div>
+      <div>일기1</div>
+      <div>일기2</div>
+      <div>일기3</div>
+    </div>
+  </body>
+</html>
