@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커스텀 달력 만들기(달력 클릭 영역)</title>
+    <style>
+      /* 1. 달력 숨기기 -> 투명하게 만들기 */
+      /* 2. 클릭 영역 덮어쓰기 */
+      .calendar {
+        position: relative;
+      }
+
+      .calendar::-webkit-calendar-picker-indicator {
+        background: transparent;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <input class="calendar" type="date" />
+  </body>
+</html>
