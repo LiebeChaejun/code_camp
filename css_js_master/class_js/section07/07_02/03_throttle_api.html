@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쓰로틀링 실습(api 연동)</title>
+    <style>
+      .parent {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .child {
+        width: 500px;
+        height: 500px;
+        margin: 50px;
+        background-color: lightgreen;
+      }
+    </style>
+    <script>
+      const callDogPicture = () => {
+        fetch("https://dog.ceo/api/breeds/image/random")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+
+            document.getElementById(
+              "parent"
+            ).innerHTML += `<img src=${data.message} width='300px' />`;
+          });
+      };
+
+      let timer = "Non Activated";
+
+      window.addEventListener("scroll", () => {
+        if (timer !== "Non Activated") return;
+
+        timer = setTimeout(() => {
+          timer = "Non Activated";
+        }, 500);
+
+        const scrollPercent =
+          document.documentElement.scrollTop /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        console.log("스크롤을 검사중입니다");
+
+        if (!(scrollPercent >= 0.7)) return;
+        console.log("상자를 그려줍니다.");
+
+        callDogPicture();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="parent" class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
