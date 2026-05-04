@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페이지네이션 리스트</title>
+    <script src="./00-basket.js"></script>
+    <script>
+      // 1.페이지 목록 보여주는 곳
+      // 시작 페이지
+      let startPage = 1;
+      const lastPage = Math.ceil(fruitsBasket.length / 10);
+
+      // 이전 페이지
+      const prevPage = () => {
+        startPage -= 10;
+        drawPage();
+      };
+
+      // 다음 페이지
+      const nextPage = () => {
+        startPage += 10;
+        drawPage();
+      };
+
+      // 페이지 그리기 기능
+      const drawPage = () => {
+        const box = new Array(10).fill("box");
+
+        const pages = box
+          .map((item, idx) => {
+            const pageNumber = startPage + idx;
+
+            // if (pageNumber <= lastPage) {
+            //   return `<button>${pageNumber}</button>`;
+            // } else {
+            //   return ``;
+            // }
+
+            return pageNumber <= lastPage
+              ? `<button onclick='showFruits()'>${pageNumber}</button>`
+              : ``;
+          })
+          .join("");
+
+        document.getElementById("page_shower").innerHTML = pages;
+      };
+
+      // 2. 과일 목록 보여주는 곳
+      const showFruits = () => {
+        const fruits = fruitsBasket.filter((item, idx) => idx <= 9);
+
+        document.getElementById("fruitsList").innerHTML = fruits
+          .map((item) => {
+            return `<div>${item.name}는 ${item.price}원 입니다.</div>`;
+          })
+          .join("");
+      };
+
+      window.onload = () => {
+        drawPage();
+      };
+    </script>
+  </head>
+  <body>
+    <!-- 과일 목록 보여주는 곳 -->
+    <div id="fruitsList"></div>
+    <!-- 페이지 버튼 보여주는 곳 -->
+    <div class="buttons">
+      <button onclick="prevPage()">이전페이지</button>
+      <span id="page_shower"></span>
+      <button onclick="nextPage()">다음페이지</button>
+    </div>
+  </body>
+</html>
