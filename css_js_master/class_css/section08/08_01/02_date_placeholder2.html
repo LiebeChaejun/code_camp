@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calendar 플레이스홀더</title>
+    <style>
+      .calendar {
+        position: relative;
+      }
+
+      .calendar::-webkit-calendar-picker-indicator {
+        background: transparent;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        z-index: 10;
+      }
+
+      /* 기본 연 월 일 지우기 */
+      .calendar::-webkit-datetime-edit-text,
+      ::-webkit-datetime-edit-year-field,
+      ::-webkit-datetime-edit-month-field,
+      ::-webkit-datetime-edit-day-field {
+        display: none;
+      }
+
+      /* 플레이스 홀더 추가하기 */
+      .calendar::after {
+        content: attr(attr_placeholder);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="date" class="calendar" />
+    <input type="date" class="calendar" attr_placeholder="생일을 선택하세요" />
+  </body>
+</html>
