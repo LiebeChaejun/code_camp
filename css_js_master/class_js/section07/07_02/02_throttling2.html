@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쓰로틀링 실습(리팩토링)</title>
+    <style>
+      .child {
+        width: 500px;
+        height: 500px;
+        margin: 50px;
+        background-color: lightgreen;
+      }
+    </style>
+    <script>
+      let timer = "Non Activated";
+
+      window.addEventListener("scroll", () => {
+        if (timer !== "Non Activated") return;
+
+        timer = setTimeout(() => {
+          timer = "Non Activated";
+        }, 500);
+
+        const scrollPercent =
+          document.documentElement.scrollTop /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        console.log("스크롤을 검사중입니다");
+
+        if (!(scrollPercent >= 0.7)) return;
+        console.log("상자를 그려줍니다.");
+        document.getElementById(
+          "parent"
+        ).innerHTML += `<div class="child"></div>`;
+      });
+    </script>
+  </head>
+  <body>
+    <div id="parent" class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
